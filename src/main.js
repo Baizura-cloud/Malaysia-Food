@@ -7,8 +7,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import Header from './header';
-import Album from './album';
+import Header from './ui/header';
+import StickyFooter from './ui/footer';
+import Album from './news/worldNews';
+import AlignItemsList from './news/techNews'
 import Link from '@material-ui/core/Link';
 
 function TabPanel(props) {
@@ -44,18 +46,6 @@ function a11yProps(index) {
   };
 }
 
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://mui.com/">
-          Your Website
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
 
 function LinkTab(props) {
   return (
@@ -104,24 +94,15 @@ export default function NavTabs() {
         <Album/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Page Two
+        {/* <AlignItemsList/> */}
       </TabPanel>
       <TabPanel value={value} index={2}>
+          {/* <AlignItemsList/> */}
         Page Three
       </TabPanel>
       
         </main>
-        {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </footer>
-      {/* End footer */}
+       <StickyFooter/>
       </Container>
       
     </React.Fragment>

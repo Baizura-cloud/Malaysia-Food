@@ -1,5 +1,5 @@
 
-import NavTabs from './navTab';
+import NavTabs from './main';
 import './App.css';
 
 function App() {
