@@ -56,13 +56,12 @@
           <div className={classes.heroContent}>
             <Container maxWidth="lg">
               <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
-                Art of the World
+                BREAKFAST AROUND MALAYSIA
               </Typography>
               <Container maxWidth="sm">
               <Typography variant="h8" align="center"  paragraph>
-                The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-                producing works to be appreciated primarily for their beauty or emotional power.
-                <Divider variant="center" component="p"/>
+                No better ways to start a day.
+                {/* <Divider variant="center" component="p"/> */}
               </Typography>
               </Container>
            
@@ -72,17 +71,22 @@
               <Grid item  xs={8}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://static01.nyt.com/images/2022/03/06/arts/06russian-artists1/merlin_73637635_90f2a08b-0404-4f7a-96bb-28965d5a1e9f-superJumbo.jpg"
+                    image="https://www.tasteasianfood.com/wp-content/uploads/2019/11/Nasi-Lemak-featured-image.jpeg"
                     title="Sara Krulwich/The New York Times"
                   />
               </Grid>
               <Grid item xs={4}>
               <Typography variant="h8" align="justify"  paragraph>
-                The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-                producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-                producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-                producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-                producing works to be appreciated primarily for their beauty or emotional power. 
+              Etymology :-
+              <br></br>nasi (“rice”) +‎ lemak (“grease; fat”).
+              <br></br>
+              <br></br>Pronunciation :- 
+              <br></br><n></n>na.si lə.ma. 
+              <br></br>
+              <br></br>Noun :-
+              <br></br>nasi lemak.
+              
+              <p></p>
               </Typography>
               </Grid>
               <Grid item xs={4}>

@@ -9,9 +9,9 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Header from './ui/header';
 import StickyFooter from './ui/footer';
-import Album from './news/worldNews';
-import AlignItemsList from './news/techNews'
-import Link from '@material-ui/core/Link';
+import Album from './news/menu';
+import AlignItemsList from './news/ordernow'
+import ArtNews from './news/contact';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -86,19 +86,18 @@ export default function NavTabs() {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="World" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Technology" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="Art" href="/spam" {...a11yProps(2)} />
+          <LinkTab label="Menu"  {...a11yProps(0)} />
+          <LinkTab label="Order Now"  {...a11yProps(1)} />
+          <LinkTab label="Contact us"  {...a11yProps(2)} />
         </Tabs>
       <TabPanel value={value} index={0}>
         <Album/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        {/* <AlignItemsList/> */}
+         {/* <AlignItemsList/>  */}
       </TabPanel>
       <TabPanel value={value} index={2}>
-          {/* <AlignItemsList/> */}
-        Page Three
+         <ArtNews/>
       </TabPanel>
       
         </main>
