@@ -10,7 +10,7 @@ import Container from '@material-ui/core/Container';
 import Header from './ui/header';
 import StickyFooter from './ui/footer';
 import Album from './news/menu';
-import AlignItemsList from './news/ordernow'
+import Pricing from './news/ordernow';
 import ArtNews from './news/contact';
 
 function TabPanel(props) {
@@ -78,32 +78,32 @@ export default function NavTabs() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-      <Header title="WorldWide News"  />
+        <Header title="Malaysian Food" />
         <main>
-        <Tabs
-          variant="fullWidth"
-          value={value}
-          onChange={handleChange}
-          aria-label="nav tabs example"
-        >
-          <LinkTab label="Menu"  {...a11yProps(0)} />
-          <LinkTab label="Order Now"  {...a11yProps(1)} />
-          <LinkTab label="Contact us"  {...a11yProps(2)} />
-        </Tabs>
-      <TabPanel value={value} index={0}>
-        <Album/>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-         {/* <AlignItemsList/>  */}
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-         <ArtNews/>
-      </TabPanel>
-      
+          <Tabs
+            variant="fullWidth"
+            value={value}
+            onChange={handleChange}
+            aria-label="nav tabs example"
+          >
+            <LinkTab label="Menu"  {...a11yProps(0)} />
+            <LinkTab label="Order Now"  {...a11yProps(1)} />
+            <LinkTab label="Contact us"  {...a11yProps(2)} />
+          </Tabs>
+          <TabPanel value={value} index={0}>
+            <Album />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <Pricing/>
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <ArtNews />
+          </TabPanel>
+
         </main>
-       <StickyFooter/>
+        <StickyFooter />
       </Container>
-      
+
     </React.Fragment>
   );
 

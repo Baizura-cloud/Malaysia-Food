@@ -27,12 +27,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const {  title } = props;
+  const { title } = props;
 
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-       
+
         <Typography
           component="h2"
           variant="h5"
@@ -44,7 +44,7 @@ export default function Header(props) {
           {title}
         </Typography>
         <IconButton>
-           <Button size="small">Who?</Button>
+          <Button size="small">Who?</Button>
         </IconButton>
       </Toolbar>
     </React.Fragment>

@@ -20,15 +20,15 @@ function Copyright() {
 
 export default function StickyFooter() {
   return (
-      <Box
-        component="footer"
-      >
-        <Container maxWidth="sm">
-          <Typography variant="body1">
-            My sticky footer can be found here.
-          </Typography>
-          <Copyright />
-        </Container>
-      </Box>
+    <Box
+      component="footer"
+    >
+      <Container maxWidth="sm">
+        <Typography variant="body1">
+          My sticky footer can be found here.
+        </Typography>
+        <Copyright />
+      </Container>
+    </Box>
   );
 }

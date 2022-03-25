@@ -1,15 +1,17 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Divider from '@mui/material/Divider';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import AddLocationIcon from '@mui/icons-material/AddLocation';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -18,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
+  },
+  heroPadding: {
+    padding: theme.spacing(0, 0, 6),
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -54,82 +59,81 @@ export default function ArtNews() {
       <main>
         <div className={classes.heroContent}>
           <Container maxWidth="lg">
-            <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
-              Meet the team
+            <Typography component="h1" variant="h4" align="center" color="textPrimary" className={classes.heroPadding} gutterBottom>
+              CONTACT US
             </Typography>
-            <Container maxWidth="sm">
-            <Typography variant="h8" align="center"  paragraph>
-            Consist of hard woker and highly motivated team of talented people to prepare perfectly cook meals that you will love.
-              <Divider variant="center" component="p"/>
-            </Typography>
-            </Container>
-         
+
             <Container maxWidth="lg">
-            
-            <Grid container spacing={3}>
-            <CardMedia
-                    className={classes.cardMedia}
-                    image="https://www.tasteasianfood.com/wp-content/uploads/2019/11/Nasi-Lemak-featured-image.jpeg"
-                    title="Sara Krulwich/The New York Times"
-                  />
-            {/* <Grid item  xs={8}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image="https://static01.nyt.com/images/2022/03/06/arts/06russian-artists1/merlin_73637635_90f2a08b-0404-4f7a-96bb-28965d5a1e9f-superJumbo.jpg"
-                  title="Sara Krulwich/The New York Times"
-                />
-            </Grid> */}
-            <Grid item xs={4}>
-            <CardMedia
-                    className={classes.cardMedia}
-                    image="https://www.tasteasianfood.com/wp-content/uploads/2019/11/Nasi-Lemak-featured-image.jpeg"
-                    title="Sara Krulwich/The New York Times"
-                  />
-            {/* <Typography variant="h8" align="justify"  paragraph>
-              The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. 
-            </Typography> */}
-            </Grid>
-            <Grid item xs={4}>
-            <CardMedia
-                    className={classes.cardMedia}
-                    image="https://www.tasteasianfood.com/wp-content/uploads/2019/11/Nasi-Lemak-featured-image.jpeg"
-                    title="Sara Krulwich/The New York Times"
-                  />
-            {/* <Typography variant="h8" align="justify"  paragraph>
-              The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power.
-            </Typography> */}
-            </Grid>
-            <Grid item xs={4}>
-            <CardMedia
-                    className={classes.cardMedia}
-                    image="https://www.tasteasianfood.com/wp-content/uploads/2019/11/Nasi-Lemak-featured-image.jpeg"
-                    title="Sara Krulwich/The New York Times"
-                  />
-            {/* <Typography variant="h8" align="justify"  paragraph>
-              The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power. The expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture, 
-              producing works to be appreciated primarily for their beauty or emotional power.
-            </Typography> */}
-            </Grid>
-        </Grid>
+              <Grid container spacing={10}>
+                <Grid Item xs={7}>
+                  <AddLocationIcon />
+                </Grid>
+
+                <Grid Item xs={5}>
+                  <p>
+                  Rather than worrying about switching offices every couple years, you can instead stay in the same location and grow-up 
+                  from your shared coworking space to an office that takes up an entire floor.
+                  </p>
+                  <form className={classes.form} noValidate>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12}>
+                        <TextField
+                          variant="outlined"
+                          required
+                          fullWidth
+                          id="name"
+                          label="Name"
+                          name="name"
+                          autoComplete="name"
+                        />
+                      </Grid>
+                      <Grid item xs={12}>
+                        <TextField
+                          variant="outlined"
+                          required
+                          fullWidth
+                          id="email"
+                          label="Email Address"
+                          name="email"
+                          autoComplete="email"
+                        />
+                      </Grid>
+                      <Grid item xs={12}>
+                        <TextField
+                          id="message"
+                          label="Message"
+                          required
+                          multiline
+                          fullWidth
+                          rows={4}
+                          variant="outlined"
+                        />
+                      </Grid>
+
+                      <Grid item xs={12}>
+                        <Button
+                          type="submit"
+                          fullWidth
+                          variant="contained"
+                          color="primary"
+                          className={classes.submit}
+                        >
+                          Submit
+                        </Button>
+                      </Grid>
+                    </Grid>
+                  </form>
+                </Grid>
+
+              </Grid>
+
+
             </Container>
-            
+
           </Container>
         </div>
       </main>
-      
+
     </React.Fragment>
   );
 }
