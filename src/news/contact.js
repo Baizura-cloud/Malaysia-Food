@@ -3,15 +3,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import Divider from '@material-ui/core/Divider';
+import MailIcon from '@mui/icons-material/Mail';
+import Album from './team';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -24,28 +23,13 @@ const useStyles = makeStyles((theme) => ({
   heroPadding: {
     padding: theme.spacing(0, 0, 6),
   },
+  heroUpPadding: {
+    padding: theme.spacing(8, 0, 0),
+  },
   heroButtons: {
     marginTop: theme.spacing(4),
   },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardMedia: {
-    paddingTop: '56.25%', // 16:9
-  },
-  cardContent: {
-    flexGrow: 1,
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
+
 }));
 
 const cards = [1, 2];
@@ -65,16 +49,16 @@ export default function ArtNews() {
 
             <Container maxWidth="lg">
               <Grid container spacing={10}>
-                <Grid Item xs={7}>
-                  <AddLocationIcon />
+                <Grid item xs={7}>
+                  <Album />
                 </Grid>
 
-                <Grid Item xs={5}>
+                <Grid item xs={5}>
                   <p>
-                  Rather than worrying about switching offices every couple years, you can instead stay in the same location and grow-up 
-                  from your shared coworking space to an office that takes up an entire floor.
+                    Rather than worrying about prices for each meal or event, you can instead contact us and
+                    have further discussion and lock in your booking quicker.
                   </p>
-                  <form className={classes.form} noValidate>
+                  <form noValidate>
                     <Grid container spacing={2}>
                       <Grid item xs={12}>
                         <TextField
@@ -127,9 +111,43 @@ export default function ArtNews() {
 
               </Grid>
 
+              <Grid container spacing={2} className={classes.heroPadding}>
+                <Grid item xs={12}>
+                  <Typography component="h1" variant="h6" align="center" color="textPrimary" className={classes.heroUpPadding} gutterBottom>
+                    Contact Details
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography>
+                    Keep track of what's happening with your applications, booking, and our newest menu item.
+                  </Typography>
+                </Grid>
+              </Grid>
+
+              <Grid container spacing={5}>
+                <Grid item xs={4}>
+                  <AddLocationIcon />
+                  <Typography>
+                    12 PSN Buntong Jaya 17 Taman Bina Ria 30100 Perak Malaysia
+                  </Typography>
+                </Grid>
+                <Divider orientation="vertical" flexItem style={{marginRight:"-1px"}}/>
+                <Grid item xs={4}>
+                  <LocalPhoneIcon />
+                  <Typography>
+                    +39 659-657-0133
+                  </Typography>
+                </Grid>
+                <Divider orientation="vertical" flexItem style={{marginRight:"-1px"}}/>
+                <Grid item xs={4}>
+                  <MailIcon />
+                  <Typography>
+                    hi@maccarianagency.com
+                  </Typography>
+                </Grid>
+              </Grid>
 
             </Container>
-
           </Container>
         </div>
       </main>
