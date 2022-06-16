@@ -1,6 +1,8 @@
 
 This is a simple sample Create React App website.
+
 Deployed: https://mfood-708c5.web.app/
+
 How to run locally:
 1. npm install
 2. npm start
