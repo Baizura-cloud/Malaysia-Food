@@ -7,7 +7,7 @@ How to run locally:
 1. npm install
 2. npm start
 
-The UI will be looking like this: 
+The UI: 
 
 (Tab: Menu)
 ![image](https://user-images.githubusercontent.com/53967791/160085910-6aa91010-5790-4067-af01-db4688c07ccd.png)
